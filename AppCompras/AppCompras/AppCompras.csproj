@@ -17,7 +17,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="VistaModelo\" />
-    <Folder Include="Vistas\" />
+    <EmbeddedResource Update="Vistas\Agregarcompra.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Vistas\Compras.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>
