@@ -2,16 +2,34 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppCompras.Vistas.Compras" 
-             NavigationPage.HasNavigationBar="False">
-    
-    <StackLayout>
-        <Grid>
-            <StackLayout Orientation="Horizontal">
-                <Image Source="https://i.ibb.co/HFC2KyN/angulo-de-la-flecha-izquierda.png" HeightRequest="20"/>
-                <Label Text="Frutas y Vegetales" VerticalOptions="Center" FontSize="18" TextColor="DimGray" Margin="30,0,0,0"/>
-                <Image Source="https://i.ibb.co/2KMp5h7/igualar.png" HeightRequest="30" HorizontalOptions="EndAndExpand"/>
+             NavigationPage.HasNavigationBar="False"
+             xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView">
+    <StackLayout BackgroundColor="Black">
+        <Grid RowDefinitions="*,100" VerticalOptions="FillAndExpand">
+            <pancake:PancakeView
+                CornerRadius="0,0,40,40" BackgroundColor="Gray">
+                <ScrollView HeightRequest="600">
+                    <Grid ColumnDefinitions="*,*" Margin="8,0,8,0" RowDefinitions="80,*">
+                        <StackLayout Orientation="Horizontal" Grid.ColumnSpan="2">
+                            <Image Source="https://i.ibb.co/HFC2KyN/angulo-de-la-flecha-izquierda.png" HeightRequest="20" Margin="10,0,0,0"/>
+                            <Label Text="Frutas y Vegetales" VerticalOptions="Center" FontSize="18" TextColor="Black" Margin="30,0,0,0"/>
+                            <Image Source="https://i.ibb.co/2KMp5h7/igualar.png" HeightRequest="30" HorizontalOptions="EndAndExpand" Margin="0,0,10,0"/>
+                        </StackLayout>
+                        <StackLayout x:Name="Izquierda" Grid.Column="0" Grid.Row="1" Background="Gray">
+                            <Frame HeightRequest="300" BackgroundColor="White" CornerRadius="10" Margin="8" HasShadow="False" Background="White" Padding="22">
+                                <StackLayout>
+                                    <Image Source="https://i.ibb.co/J29X8cj/pngegg-1.png"  HeightRequest="150" HorizontalOptions="Center" Margin="0,10"/>
+                                    <Label Text="$8.50" FontAttributes="Bold" FontSize="22" Margin="0,10" TextColor="Black"/>
+                                    <Label Text="Manzana" FontSize="16" TextColor="Black" CharacterSpacing="1"/>
+                                    <Label Text="500g" FontSize="12" TextColor="Black" CharacterSpacing="1"/>
+                                </StackLayout></Frame></StackLayout>
+                        <StackLayout x:Name="Derecha" Grid.Column="1" Grid.Row="1" Background="Gray"></StackLayout>
+                    </Grid>
+                </ScrollView>
+            </pancake:PancakeView>
+            <StackLayout Grid.Row="1" BackgroundColor="Black">
+                
             </StackLayout>
         </Grid>
     </StackLayout>
-
 </ContentPage>
