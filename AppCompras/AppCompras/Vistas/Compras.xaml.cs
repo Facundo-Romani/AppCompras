@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppCompras.VistaModelo;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,7 @@ namespace AppCompras.Vistas
         public Compras()
         {
             InitializeComponent();
+            BindingContext = new VMcompras(Navigation, Carrilderecha, Carrilizquierda);
         }
     }
 }

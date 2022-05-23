@@ -18,9 +18,10 @@ namespace AppCompras.VistaModelo
         List<Mproductos> _listaproductos; // Variable lista de productos.
         #endregion
         #region CONSTRUCTOR
-        public VMcompras(INavigation navigation)
+        public VMcompras(INavigation navigation , StackLayout Carrilderecha, StackLayout Carrilizquierda)
         {
             Navigation = navigation;
+            Mostrarproducto(Carrilderecha,Carrilizquierda);
         }
         #endregion
         #region OBJETOS
