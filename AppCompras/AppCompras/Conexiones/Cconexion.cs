@@ -7,6 +7,6 @@ namespace AppCompras.Conexiones
 {
     public class Cconexion
     {
-        public static FirebaseClient firebase = new FirebaseClient("https://appcompras-5baa3-default-rtdb.firebaseio.com");
+        public static FirebaseClient firebase = new FirebaseClient("https://appcompras-5baa3-default-rtdb.firebaseio.com/");
     }
 }

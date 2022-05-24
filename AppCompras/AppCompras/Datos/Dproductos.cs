@@ -5,6 +5,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using AppCompras.Modelo;
 using AppCompras.Conexiones;
+using Firebase.Database;
+using System.Collections.ObjectModel;
 
 namespace AppCompras.Datos
 {

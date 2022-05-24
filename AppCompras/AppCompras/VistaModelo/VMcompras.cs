@@ -45,6 +45,15 @@ namespace AppCompras.VistaModelo
             var funcion = new Dproductos();
             Listaproductos = await funcion.Mostrarproductos();
             
+            var box = new BoxView
+            {
+                HeightRequest = 60
+            };
+
+            Carrilizquierda.Children.Clear();
+            Carrilderecha.Children.Clear();
+            Carrilderecha.Children.Add(box);
+
             foreach (var item in Listaproductos)
             {
                 Dibujarproductos(item, _index, Carrilderecha, Carrilizquierda);
