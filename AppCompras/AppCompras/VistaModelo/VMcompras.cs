@@ -15,6 +15,7 @@ namespace AppCompras.VistaModelo
         #region VARIABLES
         string _Texto;
         int _index;
+       
         List<Mproductos> _listaproductos; // Variable lista de productos.
         #endregion
         #region CONSTRUCTOR
@@ -22,6 +23,7 @@ namespace AppCompras.VistaModelo
         {
             Navigation = navigation;
             Mostrarproducto(Carrilderecha,Carrilizquierda);
+
         }
         #endregion
         #region OBJETOS
@@ -123,13 +125,15 @@ namespace AppCompras.VistaModelo
             frame.Content = stack;
             carril.Children.Add(frame);
         }
+
+        
         public async Task ProcesoAsyncrono()
         {
-
-        }
+            
+        }   
         public void ProcesoSimple()
         {
-
+            
         }
         #endregion
         #region COMANDOS

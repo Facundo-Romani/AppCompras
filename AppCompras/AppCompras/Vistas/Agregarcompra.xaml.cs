@@ -15,6 +15,7 @@ namespace AppCompras.Vistas
         public Agregarcompra()
         {
             InitializeComponent();
+
         }
     }
 }

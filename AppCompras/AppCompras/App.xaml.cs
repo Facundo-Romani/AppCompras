@@ -11,7 +11,7 @@ namespace AppCompras
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage (new Compras());
+            MainPage = new NavigationPage (new Agregarcompra());
         }
 
         protected override void OnStart()

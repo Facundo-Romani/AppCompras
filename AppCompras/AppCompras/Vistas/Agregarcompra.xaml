@@ -1,12 +1,62 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppCompras.Vistas.Agregarcompra">
-    <ContentPage.Content>
+             x:Class="AppCompras.Vistas.Agregarcompra"
+             NavigationPage.HasNavigationBar="False">
+    <StackLayout Padding="36,15"
+                 Spacing="20">
+        <Image Source="https://i.ibb.co/HFC2KyN/angulo-de-la-flecha-izquierda.png"
+               HeightRequest="20"
+               Margin="20"
+               HorizontalOptions="Start"/>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Image Source="https://i.ibb.co/jbTMfZ3/pngegg-3.png"
+                   Margin="0,0,0,30"
+                   HeightRequest="220"/>
+            <Label Text="Palta"
+                   FontAttributes="Bold"
+                   FontSize="30"
+                   TextColor="Black"/>
+            <Label Text="500gr"
+                   CharacterSpacing="1"
+                   TextColor="Gray"
+                   Margin="0,-8,0,4"
+                   FontSize="14"/>
+            <StackLayout Orientation="Horizontal">
+                <Grid HorizontalOptions="StartAndExpand"
+                      VerticalOptions="Center">
+                    <Frame Padding="0"
+                           BackgroundColor="Gray"
+                           CornerRadius="20"
+                           HasShadow="False"
+                           HeightRequest="40"
+                           VerticalOptions="Center"
+                           WidthRequest="100">
+                        
+                    </Frame>
+                    <Label Text="-"
+                           FontSize="36"
+                           HorizontalOptions="Start"
+                           TextColor="Black"
+                           Margin="16,-2,0,6"/>
+                    <Label Text="1"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           FontSize="18"
+                           FontAttributes="Bold"
+                           TextColor="Black"/>
+                    <Label Text="+"
+                           FontSize="21"
+                           HorizontalOptions="End"
+                           TextColor="Black"
+                           Margin="0,+4,16,0"
+                           VerticalOptions="Center"/>
+                </Grid>
+                <Label Text="$5.35"
+                       FontAttributes="Bold"
+                       FontSize="36"
+                       TextColor="Black"/>
+            </StackLayout>
         </StackLayout>
-    </ContentPage.Content>
+    </StackLayout>
 </ContentPage>
