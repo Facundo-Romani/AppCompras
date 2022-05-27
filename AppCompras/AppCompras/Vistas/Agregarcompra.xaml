@@ -29,15 +29,14 @@
             <StackLayout Orientation="Horizontal">
                 <Grid HorizontalOptions="StartAndExpand"
                       VerticalOptions="Center">
-                    <Frame Padding="0"
-                           BackgroundColor="Gray"
-                           CornerRadius="20"
-                           HasShadow="False"
-                           HeightRequest="40"
-                           VerticalOptions="Center"
-                           WidthRequest="100">
-                    </Frame>
-                    
+                        <Frame Padding="0"
+                               BackgroundColor="Gray"
+                               CornerRadius="20"
+                               HasShadow="False"
+                               HeightRequest="40"
+                               VerticalOptions="Center"
+                               WidthRequest="100">
+                        </Frame>
                     <Label Text="-"
                            FontSize="36"
                            HorizontalOptions="Start"
@@ -48,14 +47,12 @@
                             <TapGestureRecognizer Command="{Binding Disminuircommand}"/>
                         </Label.GestureRecognizers>
                     </Label>
-                    
                     <Label Text="{Binding Cantidad}"
                            HorizontalOptions="Center"
                            VerticalOptions="Center"
                            FontSize="18"
                            FontAttributes="Bold"
                            TextColor="Black"/>
-                    
                     <Label Text="+"
                            FontSize="21"
                            HorizontalOptions="End"
@@ -108,7 +105,8 @@
                     TextTransform="None"
                     HeightRequest="20"
                     WidthRequest="250"
-                    Margin="25,0,0,0"/>
+                    Margin="25,0,0,0"
+                    Command="{Binding Insertarcommand}"/>
         </StackLayout>
     </StackLayout>
 </ContentPage>
