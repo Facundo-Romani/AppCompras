@@ -1,6 +1,7 @@
 ﻿using AppCompras.Datos;
 using AppCompras.Modelo;
 using AppCompras.VistaModelo;
+using AppCompras.Vistas;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -123,7 +124,16 @@ namespace AppCompras.VistaModelo
             stack.Children.Add(labeldescripcion);
             stack.Children.Add(labelpeso);
             frame.Content = stack;
+
+            // Tap para la navegación a otras páginas.
+            var tap = new TapGestureRecognizer();
+            tap.Tapped += async (object sender, EventArgs e) =>
+            {
+                await Navigation.PushAsync(new Agregarcompra(item));
+            };
+
             carril.Children.Add(frame);
+            stack.GestureRecognizers.Add(tap);
         }
 
         

@@ -3,15 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppCompras.Vistas.Agregarcompra"
              NavigationPage.HasNavigationBar="False">
-    <StackLayout Padding="36,15"
-                 Spacing="20">
+    <StackLayout >
         <Image Source="https://i.ibb.co/HFC2KyN/angulo-de-la-flecha-izquierda.png"
                HeightRequest="20"
                Margin="20"
                HorizontalOptions="Start"/>
-        <StackLayout>
-            <Image Source="https://i.ibb.co/jbTMfZ3/pngegg-3.png"
-                   Margin="0,0,0,30"
+        <StackLayout Padding="36,15"
+                    Spacing="20">
+            <Image Source="{Binding Parametrosrecibe.Icono}"
+                   Margin="0,0,0,0"
                    HeightRequest="220"/>
             <Label Text="Palta"
                    FontAttributes="Bold"
@@ -57,6 +57,42 @@
                        FontSize="36"
                        TextColor="Black"/>
             </StackLayout>
+            <Label Text="Descripción del producto"
+                   FontAttributes="Bold"
+                   FontSize="18"
+                   TextColor="Black"
+                   Margin="0,14,0,0"/>
+            <Label Text="Información general del producto"
+                   TextColor="DimGray"
+                   FontSize="15"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal"
+                     Padding="36,0"
+                     HorizontalOptions="FillAndExpand">
+            <Grid HorizontalOptions="Start">
+                <Frame Padding="0"
+                       BackgroundColor="White"
+                       HasShadow="False"
+                       HeightRequest="40"
+                       CornerRadius="30"
+                       WidthRequest="40"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Start">
+                    
+                </Frame>
+                <Image Source="https://i.ibb.co/VjzhZd8/amor.png"
+                       HeightRequest="20"
+                       VerticalOptions="Center"
+                       Margin="10,0"/>
+            </Grid>
+            <Button Text="Agregar al carrito"
+                    BackgroundColor="DarkOrange"
+                    CornerRadius="40"
+                    
+                    TextTransform="None"
+                    HeightRequest="20"
+                    WidthRequest="250"
+                    Margin="25,0,0,0"/>
         </StackLayout>
     </StackLayout>
 </ContentPage>
