@@ -25,5 +25,19 @@ namespace AppCompras.Datos
                     Idproducto = item.Key,
                 }).ToList();
         }
+        public async Task<List<Mproductos>> MostrarproductosPorid(Mproductos parametros)
+        {
+            return (await Cconexion.firebase
+                .Child("Productos")
+                .OnceAsync<Mproductos>())
+                .Where(a => a.Key == parametros.Idproducto).Select(item => new Mproductos
+                {
+                    Descripcion = item.Object.Descripcion,
+                    Icono = item.Object.Icono,
+                    Precio = item.Object.Precio,
+                    Peso = item.Object.Peso,
+                    Idproducto = item.Key,
+                }).ToList();
+        }
     }
 }

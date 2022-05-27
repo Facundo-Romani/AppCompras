@@ -11,5 +11,6 @@ namespace AppCompras.Modelo
         public string Idproducto { get; set; }
         public string Total { get; set; }
         public string Iddetalleventa { get; set; }
+        public string Imagen { get; set; }
     }
 }
