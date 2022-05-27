@@ -16,6 +16,7 @@ namespace AppCompras.VistaModelo
         #region VARIABLES
         string _Texto;
         int _index;
+        
        
         List<Mproductos> _listaproductos; // Variable lista de productos.
         #endregion

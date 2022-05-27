@@ -7,17 +7,21 @@
         <Image Source="https://i.ibb.co/HFC2KyN/angulo-de-la-flecha-izquierda.png"
                HeightRequest="20"
                Margin="20"
-               HorizontalOptions="Start"/>
+               HorizontalOptions="Start">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding Volvercommand}" />
+            </Image.GestureRecognizers>
+        </Image>
         <StackLayout Padding="36,15"
                     Spacing="20">
             <Image Source="{Binding Parametrosrecibe.Icono}"
                    Margin="0,0,0,0"
                    HeightRequest="220"/>
-            <Label Text="Palta"
+            <Label Text ="{Binding Parametrosrecibe.Descripcion}"
                    FontAttributes="Bold"
                    FontSize="30"
                    TextColor="Black"/>
-            <Label Text="500gr"
+            <Label Text="{Binding Parametrosrecibe.Peso}"
                    CharacterSpacing="1"
                    TextColor="Gray"
                    Margin="0,-8,0,4"
@@ -32,27 +36,39 @@
                            HeightRequest="40"
                            VerticalOptions="Center"
                            WidthRequest="100">
-                        
                     </Frame>
+                    
                     <Label Text="-"
                            FontSize="36"
                            HorizontalOptions="Start"
                            TextColor="Black"
-                           Margin="16,-2,0,6"/>
-                    <Label Text="1"
+                           FontAttributes="Bold"
+                           Margin="16,-2,0,6">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding Disminuircommand}"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                    
+                    <Label Text="{Binding Cantidad}"
                            HorizontalOptions="Center"
                            VerticalOptions="Center"
                            FontSize="18"
                            FontAttributes="Bold"
                            TextColor="Black"/>
+                    
                     <Label Text="+"
                            FontSize="21"
                            HorizontalOptions="End"
                            TextColor="Black"
-                           Margin="0,+4,16,0"
-                           VerticalOptions="Center"/>
+                           FontAttributes="Bold"
+                           Margin="0,+4,16,4"
+                           VerticalOptions="Center">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding Aumentarcommand}"/>
+                        </Label.GestureRecognizers>
+                    </Label>
                 </Grid>
-                <Label Text="$5.35"
+                <Label Text="{Binding Preciotexto}"
                        FontAttributes="Bold"
                        FontSize="36"
                        TextColor="Black"/>
@@ -78,7 +94,7 @@
                        WidthRequest="40"
                        VerticalOptions="Center"
                        HorizontalOptions="Start">
-                    
+
                 </Frame>
                 <Image Source="https://i.ibb.co/VjzhZd8/amor.png"
                        HeightRequest="20"
