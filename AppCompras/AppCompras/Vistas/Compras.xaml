@@ -29,7 +29,45 @@
                     </Grid>
                 </ScrollView>
             </pancake:PancakeView>
-            <StackLayout Grid.Row="1" BackgroundColor="Black"></StackLayout>
+            <StackLayout Grid.Row="1" BackgroundColor="Black"
+                         Orientation="Horizontal"
+                         Margin="20,10,0,0">
+                <Label Text="Cart"
+                       FontSize="30"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center"
+                       TextColor="White"/>
+                <CollectionView HorizontalOptions="CenterAndExpand"
+                                VerticalOptions="Center"
+                                ItemsSource="{Binding ListaVistapreviaDc}">
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout Orientation="Horizontal"
+                                         Span="1"
+                                         HorizontalItemSpacing="10"/>
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Image Source="{Binding Imagen}"/>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+
+                </CollectionView>
+                <Frame HeightRequest="40"
+                       WidthRequest="60"
+                       VerticalOptions="Center"
+                       CornerRadius="30"
+                       Padding="5"
+                       BackgroundColor="Yellow">
+                    <Label Text="1"
+                           VerticalOptions ="Center"
+                           FontSize="15"
+                           FontAttributes="Bold" 
+                           VerticalTextAlignment="Center"
+                           HorizontalTextAlignment="Center"/>
+                </Frame>
+            </StackLayout>
         </Grid>
     </StackLayout>
 </ContentPage>

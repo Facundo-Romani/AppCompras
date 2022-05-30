@@ -109,4 +109,4 @@
                     Command="{Binding Insertarcommand}"/>
         </StackLayout>
     </StackLayout>
-</ContentPage>
+</ContentPage>      
