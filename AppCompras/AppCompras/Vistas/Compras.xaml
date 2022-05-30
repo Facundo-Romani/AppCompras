@@ -34,6 +34,7 @@
                          Margin="20,10,0,0">
                 <Label Text="Cart"
                        FontSize="30"
+                       WidthRequest="100"
                        FontAttributes="Bold"
                        VerticalOptions="Center"
                        TextColor="White"/>
@@ -47,8 +48,16 @@
                     </CollectionView.ItemsLayout>
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
-                            <Grid>
-                                <Image Source="{Binding Imagen}"/>
+                            <Grid Margin="4,0"
+                                  WidthRequest="40">
+                                <Frame CornerRadius="24"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center">
+                                </Frame>
+                                <Image Source="{Binding Imagen}"
+                                           Margin="0,6"
+                                           WidthRequest="30"
+                                           HorizontalOptions="Center"/>
                             </Grid>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
