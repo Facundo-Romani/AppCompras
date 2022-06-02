@@ -54,7 +54,7 @@
                                        HorizontalOptions="Center"
                                        VerticalOptions="Center">
                                 </Frame>
-                                <Image Source="{Binding Imagen}"
+                                <Image Source="{Binding Icono}"
                                            Margin="0,6"
                                            WidthRequest="30"
                                            HorizontalOptions="Center"/>

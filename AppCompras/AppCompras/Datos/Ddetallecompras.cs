@@ -49,7 +49,7 @@ namespace AppCompras.Datos
                 parametros.Idproducto = hobit.Idproducto;
                 parametrosProductos.Idproducto = hobit.Idproducto;
                 var listaproductos = await funcionproductos.MostrarproductosPorid(parametrosProductos);
-                parametros.Imagen = listaproductos[0].Icono;
+                parametros.Icono = listaproductos[0].Icono;
                 ListaDc.Add(parametros);
             }
             return ListaDc;
